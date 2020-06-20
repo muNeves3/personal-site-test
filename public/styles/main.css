@@ -1,0 +1,152 @@
+* {
+  font-family: "Volkorn", Georgia, Serif;
+}
+
+body {
+  background-color: #f0f0f5;
+  -webkit-font-smoothing: antialiased;
+  padding: 0px;
+  margin: 0px;
+}
+
+.header {
+  grid-area: header;
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+  padding: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header nav a {
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 1.125em;
+  background: rgba(0,0,0,.1);
+  border-radius: 5px;
+  transition: 0.1s;
+  text-decoration: none;
+}
+
+.header nav a:hover {
+  background: rgba(0,0,0,.5);
+}
+
+.header li + li {
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.header img {
+  width: 100px;
+  height: 100px;
+}
+
+.header logo {
+  display: flex;
+  text-align: center;
+}
+
+#content {
+
+  max-width: 1000px;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+#sobre {
+  background-color: #8844ee;
+  color: white;
+
+  padding: 30px;
+  border-radius: 5px;
+
+  margin-top: 26px;
+  margin-bottom: 15px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+#content #imagem img{
+  width: 900px;
+  height: 500px;
+
+  border-radius: 5px;
+
+  display: inline-flex;
+
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.citacao{
+  margin-bottom: 0;
+  margin-left: 10%;
+  margin-top: 36px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44,44,44,0.15);
+  background: linear-gradient(135deg, #8844ee, #B07DFB);
+}
+
+.citacao p {
+  font-size: 1.5em;
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+  color: white;
+}
+
+[data-anime] {
+  opacity: 0;
+  transition: .3s;
+}
+
+[data-anime="left"] {
+  transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+  transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+  transform: translate3d(0, -50px, 0);
+}
+
+[data-anime].animate {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px);
+}
+
+@media (max-width: 760px) {
+  .header {
+    grid-template-columns: auto;
+  }
+  .logo {
+    margin-bottom: 20px;
+  }
+  .header nav a {
+    font-size: 1em;
+  }
+  .header li + li {
+    margin-left: 10px;
+  }
+  #imagem img{
+    width: 100px;
+    height: 50px;
+  }
+}
